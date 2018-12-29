@@ -88,9 +88,14 @@ WKUIDelegate,UIWebViewDelegate>
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSString *url = [request.URL absoluteString];
     //拦截链接跳转
-    if (url.length && [url hasSuffix:@".plist"] && [url hasPrefix:@"itms-services:"] && _index == 100) {
-        [_webView loadRequest:request];
-        _index += 1;
+    if (url.length) {
+        if ([url hasSuffix:@".mobileprovision"]) {
+            [[UIApplication sharedApplication] openURL:request.URL];
+            return NO;
+        } else if ([url hasSuffix:@".plist"] && [url hasPrefix:@"itms-services:"] && _index == 100) {
+            [_webView loadRequest:request];
+            _index += 1;
+        }
     }
     return YES;
 }
