@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EKSearchViewController">
+            <connections>
+                <outlet property="vEnterKeyWordLabel" destination="zz5-kw-41K" id="enx-L8-A17"/>
+                <outlet property="vEnterKeyWordLabelTopConstraint" destination="zkP-iC-g5H" id="4OH-Sj-f1r"/>
+                <outlet property="vSearchTextField" destination="1Ii-jn-Xvp" id="GwT-pp-fe7"/>
+                <outlet property="vTableView" destination="hks-c7-Z6z" id="zp7-18-Ia2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入關鍵字" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zz5-kw-41K">
+                    <rect key="frame" x="22" y="134" width="87" height="17"/>
+                    <fontDescription key="fontDescription" name=".PingFangSC-Regular" family=".PingFang SC" pointSize="17"/>
+                    <color key="textColor" red="0.20784313730000001" green="0.43137254899999999" blue="0.41960784309999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B9k-QL-z1C">
+                    <rect key="frame" x="18" y="224" width="339" height="37"/>
+                    <color key="backgroundColor" red="0.062745098040000002" green="0.60392156860000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="SwC-yj-7fP"/>
+                    </constraints>
+                    <state key="normal" title="搜  尋">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="mClickSearchButton:" destination="-1" eventType="touchUpInside" id="kjI-9P-iW6"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hks-c7-Z6z">
+                    <rect key="frame" x="0.0" y="287" width="375" height="380"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="BWU-8d-rOy"/>
+                        <outlet property="delegate" destination="-1" id="8qP-kv-GAS"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Ii-jn-Xvp">
+                    <rect key="frame" x="18" y="169" width="339" height="37"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Een-Qa-BBT"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="1Ii-jn-Xvp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="18" id="0q4-u0-jaH"/>
+                <constraint firstAttribute="trailing" secondItem="1Ii-jn-Xvp" secondAttribute="trailing" constant="18" id="1tO-Yn-gOj"/>
+                <constraint firstItem="B9k-QL-z1C" firstAttribute="trailing" secondItem="1Ii-jn-Xvp" secondAttribute="trailing" id="5Gn-j0-J9P"/>
+                <constraint firstItem="1Ii-jn-Xvp" firstAttribute="top" secondItem="zz5-kw-41K" secondAttribute="bottom" constant="18" id="87a-QM-LD6"/>
+                <constraint firstItem="B9k-QL-z1C" firstAttribute="leading" secondItem="1Ii-jn-Xvp" secondAttribute="leading" id="Gpn-tq-sfd"/>
+                <constraint firstItem="B9k-QL-z1C" firstAttribute="top" secondItem="1Ii-jn-Xvp" secondAttribute="bottom" constant="18" id="Kyd-cz-c1M"/>
+                <constraint firstAttribute="trailing" secondItem="hks-c7-Z6z" secondAttribute="trailing" id="OK5-6I-C5y"/>
+                <constraint firstAttribute="bottom" secondItem="hks-c7-Z6z" secondAttribute="bottom" id="XWG-hV-zK7"/>
+                <constraint firstItem="1Ii-jn-Xvp" firstAttribute="height" secondItem="B9k-QL-z1C" secondAttribute="height" id="fin-Gw-tdA"/>
+                <constraint firstItem="zz5-kw-41K" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="22" id="n2Z-CL-CkF"/>
+                <constraint firstItem="hks-c7-Z6z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="p9I-Yc-zTT"/>
+                <constraint firstItem="hks-c7-Z6z" firstAttribute="top" secondItem="B9k-QL-z1C" secondAttribute="bottom" constant="26" id="umc-B0-LMr"/>
+                <constraint firstItem="zz5-kw-41K" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="134" id="zkP-iC-g5H"/>
+            </constraints>
+            <point key="canvasLocation" x="41" y="42"/>
+        </view>
+    </objects>
+</document>

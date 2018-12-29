@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9C947C6CC9C094BE9857E85DF4EC96377456B182",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9C947C6CC9C094BE9857E85DF4EC96377456B182" : 9223372036854775807,
+    "149F60E48DF25EC43A2D5C3CAB96BAEB366268F2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5C6A8CC1-4341-479D-94E5-1E0F50210B3B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9C947C6CC9C094BE9857E85DF4EC96377456B182" : "EKHKAPP\/",
+    "149F60E48DF25EC43A2D5C3CAB96BAEB366268F2" : "BKSDK\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "EKHKAPP",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "EKHKAPP.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/42.120.10.224:3000\/iOS\/BKSDK.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "149F60E48DF25EC43A2D5C3CAB96BAEB366268F2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "http:\/\/42.120.10.224:3000\/iOS\/EKHKAPP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9C947C6CC9C094BE9857E85DF4EC96377456B182"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tnh-0x-McO" customClass="CourseDirectoryView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dfA-of-92L">
+                    <rect key="frame" x="0.0" y="0.0" width="125" height="667"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYM-rY-K5R">
+                    <rect key="frame" x="125" y="0.0" width="250" height="667"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gYM-rY-K5R" firstAttribute="leading" secondItem="dfA-of-92L" secondAttribute="trailing" id="C6g-iH-hNN"/>
+                <constraint firstAttribute="bottom" secondItem="gYM-rY-K5R" secondAttribute="bottom" id="HJF-5b-dHs"/>
+                <constraint firstItem="dfA-of-92L" firstAttribute="top" secondItem="tnh-0x-McO" secondAttribute="top" id="Xny-xM-gfg"/>
+                <constraint firstItem="dfA-of-92L" firstAttribute="width" secondItem="tnh-0x-McO" secondAttribute="width" multiplier="1:3" id="hyR-o5-wyW"/>
+                <constraint firstAttribute="trailing" secondItem="gYM-rY-K5R" secondAttribute="trailing" id="njh-gY-hpq"/>
+                <constraint firstItem="gYM-rY-K5R" firstAttribute="top" secondItem="tnh-0x-McO" secondAttribute="top" id="reu-SU-WeE"/>
+                <constraint firstItem="dfA-of-92L" firstAttribute="leading" secondItem="tnh-0x-McO" secondAttribute="leading" id="tcD-yE-S2w"/>
+                <constraint firstAttribute="bottom" secondItem="dfA-of-92L" secondAttribute="bottom" id="vbW-rr-z1w"/>
+            </constraints>
+            <connections>
+                <outlet property="vLeftTable" destination="dfA-of-92L" id="loc-ML-RuT"/>
+                <outlet property="vRightTable" destination="gYM-rY-K5R" id="afB-Lf-MmZ"/>
+            </connections>
+            <point key="canvasLocation" x="27" y="141"/>
+        </view>
+    </objects>
+</document>

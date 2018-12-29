@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="thirdCell" id="Hwy-TS-RwG" customClass="EKHomeThirdCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hwy-TS-RwG" id="Kjb-WK-UKy">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFy-Mc-INN">
+                        <rect key="frame" x="32" y="11" width="40" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="TIA-fu-um4"/>
+                            <constraint firstAttribute="height" constant="22" id="qiw-qj-ZYX"/>
+                        </constraints>
+                        <state key="normal" image="home_radiobut_unpressed"/>
+                        <state key="selected" image="home_radiobut_pressed"/>
+                        <connections>
+                            <action selector="mVoteAction:" destination="Hwy-TS-RwG" eventType="touchUpInside" id="0ii-Yl-bJz"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40O-YG-y7j">
+                        <rect key="frame" x="80" y="7" width="200" height="30"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1e-2a-rAS">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99904519319999996" green="0.79875427480000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qi-S4-zsS">
+                                <rect key="frame" x="8" y="4" width="192" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Sdl-qj-B5w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0qi-S4-zsS" firstAttribute="centerY" secondItem="40O-YG-y7j" secondAttribute="centerY" id="Kc1-0z-42H"/>
+                            <constraint firstItem="0qi-S4-zsS" firstAttribute="leading" secondItem="40O-YG-y7j" secondAttribute="leading" constant="8" id="bzL-en-3XD"/>
+                            <constraint firstAttribute="trailing" secondItem="0qi-S4-zsS" secondAttribute="trailing" id="kVC-r4-KRu"/>
+                            <constraint firstAttribute="height" constant="30" id="tgZ-pg-rGJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="40O-YG-y7j" firstAttribute="centerY" secondItem="Kjb-WK-UKy" secondAttribute="centerY" id="0hO-Lb-jV3"/>
+                    <constraint firstItem="hFy-Mc-INN" firstAttribute="leading" secondItem="Kjb-WK-UKy" secondAttribute="leading" constant="32" id="D48-x6-cQR"/>
+                    <constraint firstAttribute="trailing" secondItem="40O-YG-y7j" secondAttribute="trailing" constant="40" id="Gvb-6o-1xm"/>
+                    <constraint firstItem="40O-YG-y7j" firstAttribute="leading" secondItem="hFy-Mc-INN" secondAttribute="trailing" constant="8" id="ZVh-FT-J5p"/>
+                    <constraint firstItem="hFy-Mc-INN" firstAttribute="centerY" secondItem="Kjb-WK-UKy" secondAttribute="centerY" id="kxY-0B-Lfe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="vContentBox" destination="40O-YG-y7j" id="KjD-wy-9kt"/>
+                <outlet property="vProgressView" destination="n1e-2a-rAS" id="MLF-uA-zBs"/>
+                <outlet property="vTextLabel" destination="0qi-S4-zsS" id="Q8g-o1-4es"/>
+                <outlet property="vTouchBtn" destination="hFy-Mc-INN" id="78r-mB-jMB"/>
+            </connections>
+            <point key="canvasLocation" x="-244" y="-80"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="home_radiobut_pressed" width="15" height="15"/>
+        <image name="home_radiobut_unpressed" width="15" height="15"/>
+    </resources>
+</document>

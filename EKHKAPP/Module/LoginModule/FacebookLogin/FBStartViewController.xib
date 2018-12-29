@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBStartViewController">
+            <connections>
+                <outlet property="footerView" destination="gg7-Zt-trL" id="oa3-YO-Nio"/>
+                <outlet property="vStartButton" destination="r1U-n0-iAh" id="Hpa-DD-CXC"/>
+                <outlet property="vStateButton" destination="2kv-4v-K5X" id="0Up-Aq-b7Z"/>
+                <outlet property="vStateButton2" destination="Nrk-we-vuz" id="x22-kC-w3Y"/>
+                <outlet property="vStateButton3" destination="teu-Qf-Cjc" id="UfN-9F-CKS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="19" y="64"/>
+        </view>
+        <view contentMode="scaleToFill" id="gg7-Zt-trL">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1U-n0-iAh">
+                    <rect key="frame" x="10" y="49" width="300" height="40"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="qzt-Zu-Qo3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="啟動"/>
+                    <connections>
+                        <action selector="startFacebookAction:" destination="-1" eventType="touchUpInside" id="scQ-V4-ebI"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pDr-ZA-yOH">
+                    <rect key="frame" x="0.0" y="101" width="320" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="我已閱讀、明白及同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJr-MY-Vgp">
+                            <rect key="frame" x="30" y="6" width="137" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HGj-CP-Cef">
+                            <rect key="frame" x="156" y="3" width="160" height="28"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <state key="normal" title="《教育王國網站服務條款》">
+                                <color key="titleColor" red="0.063455589120000003" green="0.48285156489999997" blue="0.51924467090000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="protocolAction:" destination="-1" eventType="touchUpInside" id="Vwh-v6-GGZ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="521" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kv-4v-K5X">
+                            <rect key="frame" x="6" y="3" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="register_yuan_unpressed"/>
+                            <state key="selected" image="register_yuan_pressed"/>
+                            <connections>
+                                <action selector="selectAgreeAction:" destination="-1" eventType="touchUpInside" id="vZ0-26-p9q"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="GjS-IY-sL5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-nG-KP3">
+                    <rect key="frame" x="0.0" y="133" width="320" height="31"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本人明白及同意接收由 教育王國發出的資訊" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjC-8K-BZk">
+                            <rect key="frame" x="30" y="4" width="256" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bE-tZ-C14">
+                            <rect key="frame" x="39" y="1" width="263" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="protocolAction:" destination="-1" eventType="touchUpInside" id="4me-r8-qgT"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDK-p9-aT9">
+                            <rect key="frame" x="32" y="22" width="256" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="522" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nrk-we-vuz">
+                            <rect key="frame" x="6" y="1" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="register_yuan_unpressed"/>
+                            <state key="selected" image="register_yuan_pressed"/>
+                            <connections>
+                                <action selector="selectAgreeAction:" destination="-1" eventType="touchUpInside" id="v2Q-F7-erI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="Xsx-cp-9Ko"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIP-g5-5j0">
+                    <rect key="frame" x="0.0" y="165" width="320" height="47"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="本人願意接收達能紐迪希亞生命早期營養品" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olN-l2-sn2">
+                            <rect key="frame" x="30" y="3" width="288" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="523" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teu-Qf-Cjc">
+                            <rect key="frame" x="6" y="1" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="register_yuan_unpressed"/>
+                            <state key="selected" image="register_yuan_pressed"/>
+                            <connections>
+                                <action selector="selectAgreeAction:" destination="-1" eventType="touchUpInside" id="6mv-Qk-4b8"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(香港)有限公司的資訊" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT8-FY-cc0">
+                            <rect key="frame" x="30" y="26" width="275" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbk-XE-Uml">
+                            <rect key="frame" x="32" y="21" width="253" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W1-xF-MoZ">
+                            <rect key="frame" x="32" y="45" width="130" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6C-Ih-NSG">
+                            <rect key="frame" x="32" y="1" width="269" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="protocolAction:" destination="-1" eventType="touchUpInside" id="oZi-4I-KR1"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="jmh-za-idM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="pDr-ZA-yOH" firstAttribute="top" secondItem="r1U-n0-iAh" secondAttribute="bottom" constant="12" id="4g3-2u-mBo"/>
+                <constraint firstAttribute="trailing" secondItem="pDr-ZA-yOH" secondAttribute="trailing" id="6gq-Ll-R5F"/>
+                <constraint firstItem="K1i-nG-KP3" firstAttribute="leading" secondItem="gg7-Zt-trL" secondAttribute="leading" id="8wv-pd-npg"/>
+                <constraint firstAttribute="trailing" secondItem="K1i-nG-KP3" secondAttribute="trailing" id="8zf-hp-h5D"/>
+                <constraint firstItem="K1i-nG-KP3" firstAttribute="top" secondItem="pDr-ZA-yOH" secondAttribute="bottom" constant="1" id="Bvd-1T-CWV"/>
+                <constraint firstItem="r1U-n0-iAh" firstAttribute="leading" secondItem="gg7-Zt-trL" secondAttribute="leading" constant="10" id="INA-GV-ObI"/>
+                <constraint firstAttribute="trailing" secondItem="NIP-g5-5j0" secondAttribute="trailing" id="Iu8-PJ-ED8"/>
+                <constraint firstItem="pDr-ZA-yOH" firstAttribute="leading" secondItem="gg7-Zt-trL" secondAttribute="leading" id="Jei-ur-95c"/>
+                <constraint firstItem="NIP-g5-5j0" firstAttribute="leading" secondItem="gg7-Zt-trL" secondAttribute="leading" id="fe6-r0-YWa"/>
+                <constraint firstAttribute="trailing" secondItem="r1U-n0-iAh" secondAttribute="trailing" constant="10" id="ou8-fg-unt"/>
+                <constraint firstItem="r1U-n0-iAh" firstAttribute="top" secondItem="gg7-Zt-trL" secondAttribute="top" constant="49" id="xTZ-G8-AlT"/>
+                <constraint firstItem="NIP-g5-5j0" firstAttribute="top" secondItem="pDr-ZA-yOH" secondAttribute="bottom" constant="33" id="yTJ-lF-zx9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="36" y="680"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="register_yuan_pressed" width="13" height="13"/>
+        <image name="register_yuan_unpressed" width="13" height="13"/>
+    </resources>
+</document>

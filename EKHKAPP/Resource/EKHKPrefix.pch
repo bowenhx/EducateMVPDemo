@@ -1,0 +1,53 @@
+//
+//  EKHKPrefix.pch
+//  EKHKAPP
+//
+//  Created by calvin_Tse on 2017/9/8.
+//  Copyright © 2017年 BaByKingdom. All rights reserved.
+//
+
+#ifndef EKHKPrefix_pch
+#define EKHKPrefix_pch
+
+#import <BKSDK/BKSDK.h>
+
+
+//颜色配置文件
+#import "UIColor+app.h"
+#import "NSString+UIColor.h"
+
+//URL地址
+#import "EKHKURL.h"
+
+//定义项目中用到的中文字符
+#import "BKTextConfig.h"
+
+//常量定义，包含唯一key值定义，通知名
+#import "BKHKConstant.h"
+
+//网络请求类
+#import "EKHttpUtil.h"
+
+//用户信息存取类
+#import "BKSaveUser.h"
+
+//button 设置圆角背景图
+#import "UIButton+BackgroundImage.h"
+
+//congtroller 参数扩展，只需要实现set 接收参数即可
+#import "EKUIViewController+Params.h"
+
+//tableView 分类
+#import "UITableView+BKRefresh.h"
+
+//公用webView 页面
+#import "EKWebViewController.h"
+
+//alert/sheet view 弹框
+#import "CustomAlertController.h"
+
+//谷歌统计
+#import "EKGoogleStatistics.h"
+
+
+#endif /* EKHKPrefix_pch */

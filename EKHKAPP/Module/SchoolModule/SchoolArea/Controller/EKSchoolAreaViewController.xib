@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EKSchoolAreaViewController">
+            <connections>
+                <outlet property="vCollectionView" destination="qDj-X1-7wS" id="WF5-c6-Y1N"/>
+                <outlet property="vSchoolSelectMenuView" destination="aq9-zb-tGa" id="8ok-r4-yxh"/>
+                <outlet property="vSearchButton" destination="gFR-Xc-kXk" id="rNU-CC-F8v"/>
+                <outlet property="vSearchTextField" destination="ID6-0S-ZN4" id="YCM-Ar-df8"/>
+                <outlet property="vSearchTextFieldTopConstraint" destination="Xnn-oM-LIC" id="b6T-yX-vyD"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜 尋 學 校" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ID6-0S-ZN4">
+                    <rect key="frame" x="15" y="80" width="345" height="37"/>
+                    <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="SgT-el-lIM"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <connections>
+                        <action selector="mSearchTextFieldWordChange:" destination="-1" eventType="editingChanged" id="6m5-8J-mFz"/>
+                        <outlet property="delegate" destination="-1" id="UeR-35-Zgz"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oiw-6X-zXo">
+                    <rect key="frame" x="319" y="87.5" width="1" height="22"/>
+                    <color key="backgroundColor" red="0.81951802968978882" green="0.81965959072113037" blue="0.81950914859771729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="MDS-D3-KJx"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vi_ss" translatesAutoresizingMaskIntoConstraints="NO" id="jN5-Yg-zmq">
+                    <rect key="frame" x="329" y="87.5" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="Ioo-46-DYF"/>
+                        <constraint firstAttribute="height" constant="22" id="O9g-jD-bPa"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFR-Xc-kXk">
+                    <rect key="frame" x="320" y="80" width="40" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="IdF-dq-2Ze"/>
+                    </constraints>
+                    <connections>
+                        <action selector="mClickSearchButton:" destination="-1" eventType="touchUpInside" id="xiN-lR-cdR"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq9-zb-tGa" customClass="EKSchoolSelectMenuView">
+                    <rect key="frame" x="15" y="127" width="345" height="30"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="UKd-Fx-Vip"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="vCurrentIndex">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="qDj-X1-7wS">
+                    <rect key="frame" x="0.0" y="174" width="375" height="493"/>
+                    <color key="backgroundColor" red="0.8940201997756958" green="0.89417374134063721" blue="0.89401060342788696" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewLayout key="collectionViewLayout" id="0BZ-0a-uoR" customClass="EKSchoolAreaCollectionViewLayout"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="dVR-db-dHa"/>
+                        <outlet property="delegate" destination="-1" id="rFO-Wr-Sc5"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gFR-Xc-kXk" firstAttribute="trailing" secondItem="ID6-0S-ZN4" secondAttribute="trailing" id="DRN-td-rGB"/>
+                <constraint firstAttribute="bottom" secondItem="qDj-X1-7wS" secondAttribute="bottom" id="EWE-ZC-JQw"/>
+                <constraint firstItem="Oiw-6X-zXo" firstAttribute="height" secondItem="jN5-Yg-zmq" secondAttribute="height" id="IzR-7Q-oDA"/>
+                <constraint firstItem="gFR-Xc-kXk" firstAttribute="leading" secondItem="Oiw-6X-zXo" secondAttribute="trailing" id="JJ1-k0-qo5"/>
+                <constraint firstItem="aq9-zb-tGa" firstAttribute="trailing" secondItem="ID6-0S-ZN4" secondAttribute="trailing" id="KXi-2P-jyB"/>
+                <constraint firstItem="aq9-zb-tGa" firstAttribute="leading" secondItem="ID6-0S-ZN4" secondAttribute="leading" id="QTa-AL-8df"/>
+                <constraint firstItem="gFR-Xc-kXk" firstAttribute="top" secondItem="ID6-0S-ZN4" secondAttribute="top" id="QYd-V3-UoK"/>
+                <constraint firstItem="ID6-0S-ZN4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="Xnn-oM-LIC"/>
+                <constraint firstAttribute="trailing" secondItem="qDj-X1-7wS" secondAttribute="trailing" id="jP9-vk-Dni"/>
+                <constraint firstItem="jN5-Yg-zmq" firstAttribute="centerY" secondItem="gFR-Xc-kXk" secondAttribute="centerY" id="k68-np-0SQ"/>
+                <constraint firstItem="gFR-Xc-kXk" firstAttribute="height" secondItem="ID6-0S-ZN4" secondAttribute="height" id="kY0-EW-B4c"/>
+                <constraint firstAttribute="trailing" secondItem="ID6-0S-ZN4" secondAttribute="trailing" constant="15" id="lBi-Yv-S9c"/>
+                <constraint firstItem="Oiw-6X-zXo" firstAttribute="centerY" secondItem="ID6-0S-ZN4" secondAttribute="centerY" id="s6G-qa-b9h"/>
+                <constraint firstItem="jN5-Yg-zmq" firstAttribute="centerX" secondItem="gFR-Xc-kXk" secondAttribute="centerX" id="t3y-po-Hzq"/>
+                <constraint firstItem="ID6-0S-ZN4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="vMY-kM-TOa"/>
+                <constraint firstItem="aq9-zb-tGa" firstAttribute="top" secondItem="ID6-0S-ZN4" secondAttribute="bottom" constant="10" id="wQl-rR-Zod"/>
+                <constraint firstItem="qDj-X1-7wS" firstAttribute="top" secondItem="aq9-zb-tGa" secondAttribute="bottom" constant="17" id="waH-S1-6z1"/>
+                <constraint firstItem="qDj-X1-7wS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="z7P-mF-ESu"/>
+            </constraints>
+            <point key="canvasLocation" x="24.5" y="52.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vi_ss" width="22" height="22"/>
+    </resources>
+</document>

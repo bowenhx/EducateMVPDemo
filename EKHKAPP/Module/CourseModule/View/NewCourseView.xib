@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xzq-f3-3di" customClass="NewCourseView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cUr-MP-vhc">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cUr-MP-vhc" firstAttribute="top" secondItem="xzq-f3-3di" secondAttribute="top" id="3uC-E5-QLE"/>
+                <constraint firstItem="cUr-MP-vhc" firstAttribute="leading" secondItem="xzq-f3-3di" secondAttribute="leading" id="MAd-22-r9u"/>
+                <constraint firstAttribute="bottom" secondItem="cUr-MP-vhc" secondAttribute="bottom" id="tpk-Re-q1A"/>
+                <constraint firstAttribute="trailing" secondItem="cUr-MP-vhc" secondAttribute="trailing" id="zj6-qy-jHH"/>
+            </constraints>
+            <connections>
+                <outlet property="vTableView" destination="cUr-MP-vhc" id="7PY-7h-mQ2"/>
+            </connections>
+            <point key="canvasLocation" x="142" y="261"/>
+        </view>
+    </objects>
+</document>

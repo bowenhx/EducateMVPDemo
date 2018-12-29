@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FBConfirmViewController">
+            <connections>
+                <outlet property="_cancelBtn" destination="hx1-E2-qaz" id="PXi-ue-3JF"/>
+                <outlet property="_confirmBtn" destination="eWD-eM-q49" id="sQq-rs-qKv"/>
+                <outlet property="_detail2Lab" destination="yup-4b-FSe" id="Wjz-LX-mia"/>
+                <outlet property="_detailLab" destination="XvL-5W-QvT" id="1r2-W5-c5C"/>
+                <outlet property="_emailLab" destination="Fyo-2L-e9l" id="Sqx-pe-vsR"/>
+                <outlet property="_imageHeadView" destination="vxr-bc-bxA" id="ipm-bB-tIu"/>
+                <outlet property="_userName" destination="Qbi-AQ-N1S" id="kUy-qB-Dk5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_vi_head" translatesAutoresizingMaskIntoConstraints="NO" id="vxr-bc-bxA">
+                    <rect key="frame" x="138" y="100" width="99" height="99"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="99" id="c8n-oR-bXq"/>
+                        <constraint firstAttribute="height" constant="99" id="hiT-98-IJ1"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qbi-AQ-N1S">
+                    <rect key="frame" x="168.5" y="200" width="39.5" height="19.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19.5" id="x8m-Gr-MAa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電郵地址：xxxxxxx@xxx.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyo-2L-e9l">
+                    <rect key="frame" x="69" y="227" width="238" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="3zg-I7-YqP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWD-eM-q49">
+                    <rect key="frame" x="20" y="336" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="iKe-yW-5p2"/>
+                    </constraints>
+                    <state key="normal" title="連接以上教育王國賬號">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="selectActionType:" destination="-1" eventType="touchUpInside" id="jBs-gS-ggE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx1-E2-qaz">
+                    <rect key="frame" x="20" y="388" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="IR4-xD-hRQ"/>
+                    </constraints>
+                    <state key="normal" title="取消">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="selectActionType:" destination="-1" eventType="touchUpInside" id="GCc-Ca-sRs"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" tag="11" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登入更加快捷方便！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yup-4b-FSe">
+                    <rect key="frame" x="109.5" y="284" width="156" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="6Ne-Nz-KCf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您可以將Facebook帳戶與教育王國帳戶連結" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XvL-5W-QvT">
+                    <rect key="frame" x="20" y="256" width="335" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8Ur-Cm-lRL"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yup-4b-FSe" firstAttribute="top" secondItem="XvL-5W-QvT" secondAttribute="bottom" constant="7" id="1Sa-nB-bMe"/>
+                <constraint firstItem="eWD-eM-q49" firstAttribute="top" secondItem="yup-4b-FSe" secondAttribute="bottom" constant="31" id="1sN-ug-BJf"/>
+                <constraint firstAttribute="trailing" secondItem="hx1-E2-qaz" secondAttribute="trailing" constant="20" id="3dn-WX-5Xe"/>
+                <constraint firstItem="Qbi-AQ-N1S" firstAttribute="top" secondItem="vxr-bc-bxA" secondAttribute="bottom" constant="1" id="CfX-E7-uUe"/>
+                <constraint firstItem="XvL-5W-QvT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="D8x-I4-XHe"/>
+                <constraint firstItem="yup-4b-FSe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Gfq-5O-dWC"/>
+                <constraint firstItem="hx1-E2-qaz" firstAttribute="top" secondItem="eWD-eM-q49" secondAttribute="bottom" constant="12" id="Jj6-gc-4zz"/>
+                <constraint firstItem="Qbi-AQ-N1S" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Owy-3o-2tL"/>
+                <constraint firstAttribute="trailing" secondItem="eWD-eM-q49" secondAttribute="trailing" constant="20" id="RwZ-FI-t7a"/>
+                <constraint firstItem="eWD-eM-q49" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="UiV-PC-fod"/>
+                <constraint firstItem="Fyo-2L-e9l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="V3F-lH-vHC"/>
+                <constraint firstAttribute="trailing" secondItem="XvL-5W-QvT" secondAttribute="trailing" constant="20" id="Xvd-Vb-SuQ"/>
+                <constraint firstItem="vxr-bc-bxA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="ahk-Al-4EN"/>
+                <constraint firstItem="vxr-bc-bxA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jd3-UV-Q8i"/>
+                <constraint firstItem="Fyo-2L-e9l" firstAttribute="top" secondItem="Qbi-AQ-N1S" secondAttribute="bottom" constant="7.5" id="o3j-Bf-Bx2"/>
+                <constraint firstItem="hx1-E2-qaz" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="v3V-xr-tH2"/>
+                <constraint firstItem="XvL-5W-QvT" firstAttribute="top" secondItem="Fyo-2L-e9l" secondAttribute="bottom" constant="8" id="wZS-8e-Rqs"/>
+            </constraints>
+            <point key="canvasLocation" x="-126" y="34"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="register_vi_head" width="95" height="92"/>
+    </resources>
+</document>

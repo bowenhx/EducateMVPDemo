@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EKSearchUserCellID" id="KGk-i7-Jjw" customClass="EKSearchUserCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DhC-6S-y6F">
+                        <rect key="frame" x="13" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="nHY-22-gry"/>
+                            <constraint firstAttribute="width" secondItem="DhC-6S-y6F" secondAttribute="height" multiplier="1:1" id="pmH-RK-n4V"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="25.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBN-YP-djm">
+                        <rect key="frame" x="70" y="11" width="39.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-uz-hCs">
+                        <rect key="frame" x="70" y="37.5" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w7Y-Yn-0dj" customClass="EKSearchUserAddFriendButton">
+                        <rect key="frame" x="287" y="17.5" width="70" height="25"/>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.75294117650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="CXI-bs-PD8"/>
+                            <constraint firstAttribute="height" constant="25" id="D0o-jR-Yt3"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="加為好友"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="12"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="mClickAddFriendButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NVg-2x-Epv"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DhC-6S-y6F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ah7-aZ-RhS"/>
+                    <constraint firstItem="GBN-YP-djm" firstAttribute="leading" secondItem="DhC-6S-y6F" secondAttribute="trailing" constant="7" id="gA6-HT-Nlk"/>
+                    <constraint firstItem="w7Y-Yn-0dj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gpU-d9-AvO"/>
+                    <constraint firstItem="oUm-uz-hCs" firstAttribute="leading" secondItem="GBN-YP-djm" secondAttribute="leading" id="lEW-Md-LIt"/>
+                    <constraint firstItem="DhC-6S-y6F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="lGg-vY-Y0h"/>
+                    <constraint firstAttribute="trailing" secondItem="w7Y-Yn-0dj" secondAttribute="trailing" constant="18" id="nUj-ra-Asv"/>
+                    <constraint firstItem="oUm-uz-hCs" firstAttribute="top" secondItem="GBN-YP-djm" secondAttribute="bottom" constant="6.5" id="nXN-O4-7Nr"/>
+                    <constraint firstItem="GBN-YP-djm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="xpr-PC-0Uk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <inset key="separatorInset" minX="68" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="vAddFriendButton" destination="w7Y-Yn-0dj" id="cOq-Y4-e2k"/>
+                <outlet property="vAvatarImageView" destination="DhC-6S-y6F" id="Fib-0p-AnD"/>
+                <outlet property="vGrouptitleLabel" destination="oUm-uz-hCs" id="y0p-Dk-FCl"/>
+                <outlet property="vUsernameLabel" destination="GBN-YP-djm" id="KLh-e7-pwQ"/>
+            </connections>
+            <point key="canvasLocation" x="35.5" y="54"/>
+        </tableViewCell>
+    </objects>
+</document>

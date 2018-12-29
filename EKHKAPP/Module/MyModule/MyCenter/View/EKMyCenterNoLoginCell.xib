@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="EKMyCenterNoLoginCellID" id="KGk-i7-Jjw" customClass="EKMyCenterNoLoginCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="157"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="156.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wza-Eb-buZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g7m-Eo-PGw">
+                                <rect key="frame" x="111.5" y="27" width="152" height="36"/>
+                                <color key="backgroundColor" red="0.062745098040000002" green="0.60392156860000001" blue="0.5568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="57S-sG-y3S"/>
+                                    <constraint firstAttribute="width" constant="152" id="DHO-yi-8nq"/>
+                                </constraints>
+                                <state key="normal" title="登 錄 / 註 冊">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SSJ-Wt-8tL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="g7m-Eo-PGw" firstAttribute="centerX" secondItem="Wza-Eb-buZ" secondAttribute="centerX" id="0gV-Bf-bnB"/>
+                            <constraint firstItem="g7m-Eo-PGw" firstAttribute="centerY" secondItem="Wza-Eb-buZ" secondAttribute="centerY" id="oq3-AF-3oV"/>
+                            <constraint firstAttribute="height" constant="90" id="qtu-xU-GjI"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ec1-M5-lhX">
+                        <rect key="frame" x="0.0" y="90" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.89411764709999997" green="0.89411764709999997" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1VX-XV-yF6"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YFb-G7-YG9">
+                        <rect key="frame" x="0.0" y="91" width="375" height="65.5"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5p-dx-pRS">
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="65.5"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uD7-hy-RCl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNH-fN-Sfx">
+                                <rect key="frame" x="34" y="10" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KNH-fN-Sfx" secondAttribute="height" multiplier="1:1" id="4GY-hD-c6q"/>
+                                    <constraint firstAttribute="width" constant="26" id="pYO-3J-B3U"/>
+                                </constraints>
+                                <state key="normal" image="personal_post"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qvt-dP-HTq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUs-6b-f0A">
+                                <rect key="frame" x="32" y="42" width="30" height="13"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13" id="RvU-3O-k7H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="帖子">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vt3-O5-AD7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5c-j7-yUO">
+                                <rect key="frame" x="94" y="0.0" width="93.5" height="65.5"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qtK-xA-7IL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZ1-EY-Z30">
+                                <rect key="frame" x="128" y="10" width="26" height="26"/>
+                                <state key="normal" image="personal_collection"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ijM-J3-MkJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="753-cl-Erw">
+                                <rect key="frame" x="114" y="42" width="54" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="主題收藏">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wiH-0Y-EC1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Po-Lu-hmb">
+                                <rect key="frame" x="187.5" y="0.0" width="94" height="65.5"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IhT-bR-DVX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWB-T5-vAH">
+                                <rect key="frame" x="222" y="10" width="26" height="26"/>
+                                <state key="normal" image="personal_news"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mwf-ZH-4f9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pEj-m1-9Hb">
+                                <rect key="frame" x="208" y="42" width="54" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="消息提醒">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LyU-32-iZR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-gZ-ZKV">
+                                <rect key="frame" x="281" y="0.0" width="93.5" height="65.5"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="caj-vc-ixj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEO-EB-XzW">
+                                <rect key="frame" x="315" y="10" width="26" height="26"/>
+                                <state key="normal" image="personal_Log"/>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="J2z-rD-Pq5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXz-kJ-ilB">
+                                <rect key="frame" x="313" y="42" width="30" height="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="日誌">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="mPopToLoginViewController:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v9J-Xn-OWp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oXz-kJ-ilB" firstAttribute="top" secondItem="pEj-m1-9Hb" secondAttribute="top" id="0ga-ys-sai"/>
+                            <constraint firstItem="NWB-T5-vAH" firstAttribute="top" secondItem="uZ1-EY-Z30" secondAttribute="top" id="25P-Do-skD"/>
+                            <constraint firstItem="NWB-T5-vAH" firstAttribute="width" secondItem="uZ1-EY-Z30" secondAttribute="width" id="2TT-Ri-fRH"/>
+                            <constraint firstItem="F5p-dx-pRS" firstAttribute="top" secondItem="YFb-G7-YG9" secondAttribute="top" id="34M-cC-D4e"/>
+                            <constraint firstAttribute="bottom" secondItem="F5p-dx-pRS" secondAttribute="bottom" id="3K0-ya-Vtb"/>
+                            <constraint firstItem="oXz-kJ-ilB" firstAttribute="centerX" secondItem="dX2-gZ-ZKV" secondAttribute="centerX" id="5dd-jX-Y8c"/>
+                            <constraint firstItem="gUs-6b-f0A" firstAttribute="top" secondItem="KNH-fN-Sfx" secondAttribute="bottom" constant="6" id="5iz-x7-yfS"/>
+                            <constraint firstItem="KNH-fN-Sfx" firstAttribute="top" secondItem="F5p-dx-pRS" secondAttribute="top" constant="10" id="6gH-My-geF"/>
+                            <constraint firstItem="uZ1-EY-Z30" firstAttribute="width" secondItem="KNH-fN-Sfx" secondAttribute="width" id="7lV-Yd-Nc7"/>
+                            <constraint firstItem="F5p-dx-pRS" firstAttribute="leading" secondItem="YFb-G7-YG9" secondAttribute="leading" id="7sA-6Z-ojY"/>
+                            <constraint firstItem="NWB-T5-vAH" firstAttribute="centerX" secondItem="1Po-Lu-hmb" secondAttribute="centerX" id="86x-S2-GQ4"/>
+                            <constraint firstItem="dX2-gZ-ZKV" firstAttribute="leading" secondItem="1Po-Lu-hmb" secondAttribute="trailing" id="8EU-Ex-3yt"/>
+                            <constraint firstItem="y5c-j7-yUO" firstAttribute="width" secondItem="F5p-dx-pRS" secondAttribute="width" id="8Wh-mM-AKj"/>
+                            <constraint firstItem="uZ1-EY-Z30" firstAttribute="top" secondItem="KNH-fN-Sfx" secondAttribute="top" id="91f-DS-bnW"/>
+                            <constraint firstItem="pEj-m1-9Hb" firstAttribute="top" secondItem="753-cl-Erw" secondAttribute="top" id="AZ9-cR-tnf"/>
+                            <constraint firstItem="uZ1-EY-Z30" firstAttribute="height" secondItem="KNH-fN-Sfx" secondAttribute="height" id="ArF-4l-lJt"/>
+                            <constraint firstItem="MEO-EB-XzW" firstAttribute="width" secondItem="NWB-T5-vAH" secondAttribute="width" id="Bhh-05-itt"/>
+                            <constraint firstItem="dX2-gZ-ZKV" firstAttribute="top" secondItem="YFb-G7-YG9" secondAttribute="top" id="DpO-Nm-hTU"/>
+                            <constraint firstAttribute="bottom" secondItem="1Po-Lu-hmb" secondAttribute="bottom" id="Hsf-XH-uyN"/>
+                            <constraint firstItem="pEj-m1-9Hb" firstAttribute="centerX" secondItem="1Po-Lu-hmb" secondAttribute="centerX" id="KJC-RI-HDw"/>
+                            <constraint firstItem="753-cl-Erw" firstAttribute="centerX" secondItem="y5c-j7-yUO" secondAttribute="centerX" id="KL0-or-imW"/>
+                            <constraint firstItem="1Po-Lu-hmb" firstAttribute="width" secondItem="y5c-j7-yUO" secondAttribute="width" id="RH6-vl-bbc"/>
+                            <constraint firstItem="1Po-Lu-hmb" firstAttribute="top" secondItem="YFb-G7-YG9" secondAttribute="top" id="RfE-Na-9cX"/>
+                            <constraint firstItem="oXz-kJ-ilB" firstAttribute="height" secondItem="pEj-m1-9Hb" secondAttribute="height" id="Ttv-f6-eTH"/>
+                            <constraint firstItem="gUs-6b-f0A" firstAttribute="centerX" secondItem="F5p-dx-pRS" secondAttribute="centerX" id="W5i-M0-Baf"/>
+                            <constraint firstItem="y5c-j7-yUO" firstAttribute="top" secondItem="YFb-G7-YG9" secondAttribute="top" id="dLz-CT-3dS"/>
+                            <constraint firstItem="MEO-EB-XzW" firstAttribute="top" secondItem="NWB-T5-vAH" secondAttribute="top" id="eop-GD-V3F"/>
+                            <constraint firstItem="753-cl-Erw" firstAttribute="top" secondItem="gUs-6b-f0A" secondAttribute="top" id="gPc-bE-d6O"/>
+                            <constraint firstItem="1Po-Lu-hmb" firstAttribute="leading" secondItem="y5c-j7-yUO" secondAttribute="trailing" id="hib-l8-FYa"/>
+                            <constraint firstItem="753-cl-Erw" firstAttribute="height" secondItem="gUs-6b-f0A" secondAttribute="height" id="jXI-nG-Gco"/>
+                            <constraint firstItem="MEO-EB-XzW" firstAttribute="centerX" secondItem="dX2-gZ-ZKV" secondAttribute="centerX" id="lcN-bp-Q28"/>
+                            <constraint firstAttribute="trailing" secondItem="dX2-gZ-ZKV" secondAttribute="trailing" id="llF-qH-ugF"/>
+                            <constraint firstItem="uZ1-EY-Z30" firstAttribute="centerX" secondItem="y5c-j7-yUO" secondAttribute="centerX" id="oUD-fY-lgU"/>
+                            <constraint firstItem="y5c-j7-yUO" firstAttribute="leading" secondItem="F5p-dx-pRS" secondAttribute="trailing" id="px7-1n-7F8"/>
+                            <constraint firstItem="dX2-gZ-ZKV" firstAttribute="width" secondItem="1Po-Lu-hmb" secondAttribute="width" id="r6H-i3-pQg"/>
+                            <constraint firstItem="KNH-fN-Sfx" firstAttribute="centerX" secondItem="F5p-dx-pRS" secondAttribute="centerX" id="suu-td-ayW"/>
+                            <constraint firstItem="NWB-T5-vAH" firstAttribute="height" secondItem="uZ1-EY-Z30" secondAttribute="height" id="t5O-KF-36E"/>
+                            <constraint firstItem="MEO-EB-XzW" firstAttribute="height" secondItem="NWB-T5-vAH" secondAttribute="height" id="vDg-9H-j2X"/>
+                            <constraint firstItem="pEj-m1-9Hb" firstAttribute="height" secondItem="753-cl-Erw" secondAttribute="height" id="w3S-Xn-S2g"/>
+                            <constraint firstAttribute="bottom" secondItem="dX2-gZ-ZKV" secondAttribute="bottom" id="wRr-uJ-OqK"/>
+                            <constraint firstAttribute="bottom" secondItem="y5c-j7-yUO" secondAttribute="bottom" id="z6C-M0-xPL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ec1-M5-lhX" firstAttribute="top" secondItem="Wza-Eb-buZ" secondAttribute="bottom" id="5sV-1k-bbp"/>
+                    <constraint firstAttribute="trailing" secondItem="YFb-G7-YG9" secondAttribute="trailing" id="LyL-Rk-1nw"/>
+                    <constraint firstAttribute="trailing" secondItem="Wza-Eb-buZ" secondAttribute="trailing" id="QPB-Qa-qRp"/>
+                    <constraint firstItem="Wza-Eb-buZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Syl-GP-hpX"/>
+                    <constraint firstItem="ec1-M5-lhX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="bVq-Vk-aNf"/>
+                    <constraint firstItem="YFb-G7-YG9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="btR-kW-H94"/>
+                    <constraint firstItem="Wza-Eb-buZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fDA-lS-nwB"/>
+                    <constraint firstAttribute="bottom" secondItem="YFb-G7-YG9" secondAttribute="bottom" id="jS0-jK-3DR"/>
+                    <constraint firstAttribute="trailing" secondItem="ec1-M5-lhX" secondAttribute="trailing" id="sAl-nw-nfx"/>
+                    <constraint firstItem="YFb-G7-YG9" firstAttribute="top" secondItem="ec1-M5-lhX" secondAttribute="bottom" id="u2U-wl-l99"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="36.5" y="53.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="personal_Log" width="26" height="26"/>
+        <image name="personal_collection" width="26" height="26"/>
+        <image name="personal_news" width="26" height="26"/>
+        <image name="personal_post" width="26" height="26"/>
+    </resources>
+</document>

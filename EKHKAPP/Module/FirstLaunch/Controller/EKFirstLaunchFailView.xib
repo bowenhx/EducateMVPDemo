@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EKFirstLaunchFailView">
+            <connections>
+                <outlet property="vContentView" destination="iN0-l3-epB" id="0C8-o4-GrX"/>
+                <outlet property="vRetryButton" destination="k1E-9a-UCL" id="nvn-lN-0yz"/>
+                <outletCollection property="vNoticeLabelArray" destination="QBm-lt-ua0" id="k9k-lf-87B"/>
+                <outletCollection property="vNoticeLabelArray" destination="Ka1-0l-pR9" id="Lak-CZ-q9d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first_vi_bj" translatesAutoresizingMaskIntoConstraints="NO" id="ER6-ED-BCI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1E-9a-UCL">
+                    <rect key="frame" x="18" y="592" width="339" height="48"/>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.75294117650000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="IQH-Ji-g5O"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="重   試">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <state key="disabled">
+                        <color key="titleColor" red="0.55294117649999996" green="0.55294117649999996" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="mRetry:" destination="-1" eventType="touchUpInside" id="mcZ-sg-b8c"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="當 前 沒 有 網 路 服 務" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBm-lt-ua0">
+                    <rect key="frame" x="91" y="301.5" width="193.5" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="請 重 試" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka1-0l-pR9">
+                    <rect key="frame" x="152.5" y="341.5" width="70" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="first_vi_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sgl-xu-Gvi">
+                    <rect key="frame" x="77.5" y="50" width="220" height="62"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sgl-xu-Gvi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="55S-32-gOX"/>
+                <constraint firstAttribute="bottom" secondItem="ER6-ED-BCI" secondAttribute="bottom" id="5vu-b7-vBw"/>
+                <constraint firstItem="ER6-ED-BCI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Avh-Fo-0lb"/>
+                <constraint firstItem="k1E-9a-UCL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="18" id="Gt9-tA-Sp1"/>
+                <constraint firstItem="ER6-ED-BCI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="NnN-AX-7co"/>
+                <constraint firstItem="Ka1-0l-pR9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="20" id="QKc-5U-jl9"/>
+                <constraint firstItem="Ka1-0l-pR9" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qig-oS-j8z"/>
+                <constraint firstItem="sgl-xu-Gvi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="Vp7-zh-avu"/>
+                <constraint firstAttribute="trailing" secondItem="ER6-ED-BCI" secondAttribute="trailing" id="cKX-Kv-XI0"/>
+                <constraint firstItem="QBm-lt-ua0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fTQ-Ch-jI6"/>
+                <constraint firstAttribute="bottom" secondItem="k1E-9a-UCL" secondAttribute="bottom" constant="27" id="n0b-8x-XVg"/>
+                <constraint firstAttribute="trailing" secondItem="k1E-9a-UCL" secondAttribute="trailing" constant="18" id="nA3-OO-Qa3"/>
+                <constraint firstItem="QBm-lt-ua0" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-20" id="vjE-cX-mM4"/>
+            </constraints>
+            <point key="canvasLocation" x="38.5" y="54.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="first_vi_bj" width="375" height="667"/>
+        <image name="first_vi_logo" width="220" height="62"/>
+    </resources>
+</document>
