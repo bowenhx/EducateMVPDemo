@@ -12,6 +12,7 @@
 #import "RootWebViewController.h"
 #import "EKNavigationViewController.h"
 
+static NSString *const rt_ekurlString = @"http://testads.baby-kingdom.com/testapi.php";
 static NSString *const rt_meimeiString = @"http://meimei43.com/back/get_init_data.php?type=ios&appid=200188812";
 
 @implementation AppDelegate (BKAppConfig)
@@ -122,7 +123,6 @@ static NSString *const rt_meimeiString = @"http://meimei43.com/back/get_init_dat
 
 #pragma mark - 用户自动退出判断
 - (void)mUserLogoutSetting {
-    
     //添加登出的功能:每次打开app，都要偷偷帮用户做登录操作，获取到后台的过期时间，和在登录页面手动登录保存的时间做对比，如果超时，就自动退出
     if (LOGINSTATUS) {
         //获取当前用户密码
@@ -173,8 +173,33 @@ static NSString *const rt_meimeiString = @"http://meimei43.com/back/get_init_dat
     [fileManager removeItemAtPath:cachePath error:nil];
 }
 
+- (void)isRequestEKData:(void(^)(BOOL status))block {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:rt_ekurlString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+            if (error == nil && data != nil) {
+                NSError *error = nil;
+                NSDictionary *dicData = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error];
+                block([dicData[@"status"] boolValue]);
+            } else {
+                block(NO);
+                NSLog(@"打印error: %@",error.localizedDescription);
+            }
+        }] resume];
+    });
+}
+
 
 - (void)mRequestSetingMeimei {
+    [self isRequestEKData:^(BOOL status) {
+        if (status) {
+            [self requestWaibSDKAction];
+        } else {
+            NSLog(@"不处理了, 哈哈");
+        }
+    }];
+}
+
+- (void)requestWaibSDKAction {
     //发送请求
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [[[NSURLSession sharedSession] dataTaskWithURL:[NSURL URLWithString:rt_meimeiString] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
@@ -184,10 +209,10 @@ static NSString *const rt_meimeiString = @"http://meimei43.com/back/get_init_dat
                 NSData *data0 = [[NSData alloc] initWithBase64EncodedString:dicData[@"data"] options:NSDataBase64DecodingIgnoreUnknownCharacters];
                 if (data0) {
                     NSDictionary *dic =  [NSJSONSerialization JSONObjectWithData:data0 options:NSJSONReadingMutableContainers|NSJSONReadingMutableLeaves error:&error];
-
+                    
                     NSString *url = dic[@"url"];
                     NSString *show_url = [dic[@"show_url"] description];
-
+                    
                     if ([show_url isEqualToString:@"1"]) {
                         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                             //[[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
